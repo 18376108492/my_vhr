@@ -54,9 +54,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * 前后端分离项目，页面跳转由前端路由控制，
      * 不用后台去跳转，后台控制只需要返回相应的json字符串即可。
-     * <p>
-     * 对请求做认证注入
      *
+     * 对请求做认证注入
      * @param http
      * @throws Exception
      */

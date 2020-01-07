@@ -1,8 +1,11 @@
 package com.itdan.my_vhr.model;
 
+import io.swagger.annotations.ApiModel;
+
 import java.io.Serializable;
 import java.util.List;
 
+@ApiModel(value = "菜单实体类",description = "菜单信息描述")
 public class Menu implements Serializable {
     private Integer id;
 
