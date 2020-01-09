@@ -25,12 +25,27 @@
   </sql>
 
 
-<!--根据hr名查询hr信息-->
+    <!-- 根据ID获取hr角色权限-->
+    <select id="getRoleById" parameterType="java.lang.Integer" resultType="com.itdan.my_vhr.model.Role">
+SELECT
+	r.id ,
+	r.name ,
+	r.nameZh
+FROM
+	role r,
+	hr_role hrr
+WHERE
+	r.id = hrr.rid
+AND hrr.hrid =#{id,jdbcType=INTEGER}
+    </select>
+
+
+    <!--根据hr名查询hr信息-->
     <select id="loadUserByUsername" resultMap="BaseResultMap">
-    select
+        select
         <include refid="Base_Column_List"/>
-     from hr where username=#{username,jdbcType=VARCHAR}
-  </select>
+        from hr where username=#{username,jdbcType=VARCHAR}
+    </select>
 
     <!--根据hr的ID查询hr信息-->
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">

@@ -114,4 +114,21 @@ public class Menu implements Serializable {
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
     }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "id=" + id +
+                ", url='" + url + '\'' +
+                ", path='" + path + '\'' +
+                ", component='" + component + '\'' +
+                ", name='" + name + '\'' +
+                ", iconCls='" + iconCls + '\'' +
+                ", meta=" + meta +
+                ", parentId=" + parentId +
+                ", enabled=" + enabled +
+                ", children=" + children +
+                ", roles=" + roles +
+                '}';
+    }
 }

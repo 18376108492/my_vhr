@@ -1,8 +1,11 @@
 package com.itdan.my_vhr.mapper;
 
+import com.itdan.my_vhr.model.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 import com.itdan.my_vhr.model.Hr;
+
+import java.util.List;
 
 
 @Component
@@ -27,5 +30,12 @@ public interface HrMapper {
      * @return
      */
     Hr loadUserByUsername(String username);
+
+    /**
+     * 根据ID获取hr角色权限
+     * @param id
+     * @return
+     */
+    List<Role> getRoleById(Integer id);
 
 }

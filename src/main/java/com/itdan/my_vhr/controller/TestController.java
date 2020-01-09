@@ -15,4 +15,18 @@ public class TestController {
         return "test";
     }
 
+
+    @GetMapping("/employee/basic/test01")
+    public String test01(){
+        return "/employee/basic/test01";
+    }
+
+
+    @GetMapping("/employee/advanced/test01")
+    public String test02(){
+        return "/employee/advanced/test01";
+    }
+
+
+
 }

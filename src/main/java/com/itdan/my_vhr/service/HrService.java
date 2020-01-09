@@ -28,6 +28,8 @@ public class HrService implements UserDetailsService {
               throw new UsernameNotFoundException("根据hr名查询用户操作失败,用户不存在");
           }
           logger.info("根据hr名查询用户操作成功");
+         //用户登入成功后给用户设置角色
+        hr.setRoles(hrMapper.getRoleById(hr.getId()));
         return hr;
     }
 

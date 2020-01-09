@@ -29,7 +29,18 @@ public class MenuService {
         //从SecurityContextHolder中获取到登入用户的信息，在获取ID
         logger.info("根据登入的用户ID获取其能访问的相应菜单操作");
         List<Menu> menuList=   menuMapper.getSystemConfigMenuByHrId(((Hr)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
-        logger.info("根据登入的用户ID获取其能访问的相应菜单操作操作成功");
+        logger.info("根据登入的用户ID获取其能访问的相应菜单操作成功");
+        return menuList;
+    }
+
+    /**
+     * 获取数据中的所有菜单
+     * @return
+     */
+    public List<Menu> getAllEmnus(){
+        logger.info("获取数据中的所有菜单操作");
+        List<Menu> menuList=   menuMapper.getAllEmnus();
+        logger.info("获取数据中的所有菜单操作成功");
         return menuList;
     }
 }
