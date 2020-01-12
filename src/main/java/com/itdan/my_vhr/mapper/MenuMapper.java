@@ -36,5 +36,18 @@ public interface MenuMapper {
      * 获取数据中的所有菜单
      * @return
      */
-     List<Menu> getAllEmnus();
+     List<Menu> getAllMenus();
+
+    /**
+     * 获取菜单栏的树形结构
+     * @return
+     */
+     List<Menu> getAllMenusByTree();
+
+    /**
+     * 根据rid获取所拥有的权限数组
+     * @param rid
+     * @return
+     */
+    List<Integer> getMidsByRid(Integer rid);
 }

@@ -1,10 +1,13 @@
 package com.itdan.my_vhr.model;
 
+import io.swagger.annotations.ApiModel;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@ApiModel(value = "部门实体类",description = "部门信息描述")
 public class Department implements Serializable {
     private Integer id;
 

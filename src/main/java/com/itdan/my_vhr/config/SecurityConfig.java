@@ -160,6 +160,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             public void commence(HttpServletRequest req, HttpServletResponse resp, AuthenticationException e) throws IOException, ServletException {
                 //设置响应体
                 resp.setContentType("application/json;charset=utf-8");
+                resp.setStatus(401);//在前端进行处理，并且跳转至登入界面
                 PrintWriter printWriter = resp.getWriter();
                 RespBean result = RespBean.error("访问失败");
                 //设置错误信息

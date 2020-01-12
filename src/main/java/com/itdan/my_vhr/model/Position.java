@@ -1,11 +1,14 @@
 package com.itdan.my_vhr.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+
+@ApiModel(value = "职位信息实体类",description = "职位信息描述")
 public class Position implements Serializable {
     private Integer id;
 

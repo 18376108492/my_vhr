@@ -20,9 +20,13 @@ public class MenuTest {
 
     @Test
     public void test01(){
-        List<Menu> menus=menuMapper.getAllEmnus();
+        List<Menu> menus=menuMapper.getAllMenus();
         System.out.println(menus.toString());
+    }
 
-
+    @Test
+    public void test02(){
+        List<Menu> menus=menuMapper.getAllMenusByTree();
+        System.out.println(menus.toString());
     }
 }
